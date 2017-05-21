@@ -23,8 +23,8 @@ content edible paragraph </p>
 <script type="text/javascript">
   if (typeof(Yamli) == "object" && Yamli.init( { uiLanguage: "en" , startMode: "onOrUserDefault" } ))
   {
- Yamli.yamlifyType('any');
- //document.getElementById("textbox_id").value = Yamli.yamlify('textbox_id');
+ //Yamli.yamlifyType('any');
+ document.getElementById("textbox_id").value = Yamli.yamlify('textbox_id');
 
   }
 </script>
@@ -102,7 +102,7 @@ content edible paragraph </p>
   }
 </script>
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,user_posts" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
