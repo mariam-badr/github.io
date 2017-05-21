@@ -105,8 +105,8 @@ content edible paragraph </p>
     
     FB.api( "/me/posts",{ "with": "location" }, function (response) {
       if (response && !response.error) {
-        document.getElementById('status').innerHTML =
-        'done mariom, ' + response[0].message + '!';
+        document.getElementById('textbox_id').innerHTML =
+        'done mariom, ' ;//+ response[0].message + '!';
       }
     }
 );
