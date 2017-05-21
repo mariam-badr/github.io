@@ -29,7 +29,10 @@ content edible paragraph </p>
   }
 </script>
 <script>
-  window.fbAsyncInit = function() {
+  window.fbAsyncInit = 
+    
+    
+    tion() {
     FB.init({
       appId      : '1144071319037713',
       xfbml      : true,
@@ -98,7 +101,15 @@ content edible paragraph </p>
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-    });
+      });
+    
+    FB.api( "/me/posts",{ "with": "location" }, function (response) {
+      if (response && !response.error) {
+        document.getElementById('status').innerHTML =
+        'done mariom, ' + response.name + '!';
+      }
+    }
+);
   }
 </script>
 
