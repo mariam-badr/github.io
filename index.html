@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.ewflekfleflkweflkew.com/xhtml" >
-<script type="text/javascript" src="http://api.yamli.com/js/yamli_api.js"></script>
+<script type="text/javascript" src="https://api.yamli.com/js/yamli_api.js"></script>
 
 <html>
 <meta charset="UTF-8">
@@ -29,10 +29,7 @@ content edible paragraph </p>
   }
 </script>
 <script>
-  window.fbAsyncInit = 
-    
-    
-    tion() {
+  window.fbAsyncInit = function() {
     FB.init({
       appId      : '1144071319037713',
       xfbml      : true,
@@ -105,8 +102,8 @@ content edible paragraph </p>
     
     FB.api( "/me/posts",{ "with": "location" }, function (response) {
       if (response && !response.error) {
-        document.getElementById('textbox_id').innerHTML =
-        'done mariom, ' ;//+ response[0].message + '!';
+        document.getElementById('textbox_id').innerHTML.value =
+        'done mariom,' ;//+ response[0].message + '!';
       }
     }
 );
