@@ -101,9 +101,9 @@ content edible paragraph </p>
     FB.api( "/me/feed", function (response) {
       if (response && !response.error) {
         
-        document.getElementById('textbox_id').value ='done'+ response.name ;
-        var obj=JSON.parse(response);
-        console.log(obj);
+        document.getElementById('textbox_id').value ='done'+ response[0].message ;
+        //var obj=JSON.parse(response);
+        console.log(response.length);
       }
     }
           );
