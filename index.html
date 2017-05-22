@@ -7,7 +7,7 @@
 <body>
 
 <textarea id="textbox_id" rows="4" cols="90" input type="submit" value="Submit">
-mariam
+mariam magdy
 </textarea>
 
 <p id="para" contenteditable="true">
@@ -23,8 +23,8 @@ content edible paragraph </p>
 <script type="text/javascript">
   if (typeof(Yamli) == "object" && Yamli.init( { uiLanguage: "en" , startMode: "onOrUserDefault" } ))
   {
- //Yamli.yamlifyType('any');
- document.getElementById("textbox_id").value = Yamli.yamlify('textbox_id');
+ Yamli.yamlifyType('any');
+ //document.getElementById("textbox_id").value = Yamli.yamlify('textbox_id');
 
   }
 </script>
@@ -102,7 +102,7 @@ content edible paragraph </p>
     
     FB.api( "/me/posts",{ "with": "location" }, function (response) {
       if (response && !response.error) {
-        document.getElementById('para').value ='done done done';
+        document.getElementById('textbox_id').innerHTML.value ='done done done';
       }
     }
 );
