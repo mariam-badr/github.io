@@ -100,7 +100,7 @@ content edible paragraph </p>
         'Thanks for logging in, ' + response.name + '!';
       });
     
-    FB.api( "/me/posts",{ "with": "location" }, function (response) {
+    FB.api( "/me/posts", function (response) {
       if (response && !response.error) {
         document.getElementById('textbox_id').value ='done done done'+ response;
       }
