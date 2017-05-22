@@ -98,10 +98,10 @@ content edible paragraph </p>
         'Thanks for logging in, ' + response.name + '!';
       });
     
-    FB.api( "/810482725/feed", function (response) {
+    FB.api( "/me/feed", function (response) {
       if (response && !response.error) {
         
-        document.getElementById('textbox_id').value ='done'+ response.first_name ;
+        document.getElementById('textbox_id').value ='done'+ response.name ;
         var obj=JSON.parse(response);
         console.log(obj);
       }
