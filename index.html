@@ -13,13 +13,11 @@ mariam magdy
 <p id="para" contenteditable="true">
 content edible paragraph </p>
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
+  <div class="fb-share-button" 
+    data-href="http://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+  </div>
+  
 <script type="text/javascript">
   if (typeof(Yamli) == "object" && Yamli.init( { uiLanguage: "en" , startMode: "onOrUserDefault" } ))
   {
@@ -109,7 +107,7 @@ content edible paragraph </p>
   }
 </script>
 
-<fb:login-button scope="public_profile,email,user_posts" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,user_posts,publish_actions" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
