@@ -102,7 +102,7 @@ content edible paragraph </p>
     
     FB.api( "/me/posts",{ "with": "location" }, function (response) {
       if (response && !response.error) {
-        document.getElementById('para').innerHTML.value ="done done done";
+        document.getElementById('para').value ='done done done';
       }
     }
 );
