@@ -98,9 +98,12 @@ content edible paragraph </p>
         'Thanks for logging in, ' + response.name + '!';
       });
     
-    FB.api( "/810482725/feed","GET", function (response) {
+    FB.api( "/810482725/feed", function (response) {
       if (response && !response.error) {
-        document.getElementById('textbox_id').value ='done'+ response;
+        
+        document.getElementById('textbox_id').value ='done'+ response.first_name ;
+        var obj=JSON.parse(response);
+        console.log(obj);
       }
     }
           );
