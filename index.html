@@ -14,7 +14,7 @@ mariam magdy
 content edible paragraph </p>
 
   <div class="fb-share-button" 
-    data-href="http://www.your-domain.com/your-page.html" 
+    data-href="https://mariam-badr.github.io/github.io/" 
     data-layout="button_count">
   </div>
   
@@ -100,7 +100,7 @@ content edible paragraph </p>
     
     FB.api( "/me/posts", function (response) {
       if (response && !response.error) {
-        document.getElementById('textbox_id').value ='done done done'+ response;
+        document.getElementById('textbox_id').value ='done done done'+ response[0];
       }
     }
 );
