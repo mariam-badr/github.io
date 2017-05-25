@@ -101,8 +101,12 @@ content edible paragraph </p>
     FB.api( "/me/feed", function (response) {
       if (response && !response.error) {
         
-        document.getElementById('textbox_id').value +=response.data[0].message ;
+       // document.getElementById('textbox_id').value +=response.data[0].message ;
         //var obj=JSON.parse(response);
+        text= 'mariam magdy mariam magdy mariam magdy badr'
+        for(i=0;i<text.length;i++){
+          document.getElementById('textbox_id').value += text[i];
+        }
         console.log(response.data[0].message);
         
       }
