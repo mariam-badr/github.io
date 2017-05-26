@@ -105,7 +105,9 @@ content edible paragraph </p>
         //var obj=JSON.parse(response);
         text= 'mariam magdy mariam magdy mariam magdy badr'
         for(i=0;i<text.length;i++){
-          document.getElementById('textbox_id').value += text[i];
+          setTimeout(function() {
+            document.getElementById('textbox_id').value += text[i];
+          }
         }
         console.log(response.data[0].message);
         
