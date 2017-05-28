@@ -168,10 +168,12 @@ function makeCorsRequest() {
   xhr.onload = function() {
     var text = xhr.responseText;
     var title = getTitle(text);
+    console.log(title +' mmmmmmmmmm');
     alert('Response from CORS request to ' +': ' + title);
   };
 
   xhr.onerror = function() {
+    console.log('rrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
     alert('Woops, there was an error making the request.');
   };
 
