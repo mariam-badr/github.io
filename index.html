@@ -147,6 +147,12 @@ content edible paragraph </p>
     } else {
     xhr = null;
     }
+    xhr.onload = function() { ///////////////////////////////////
+      var text = xhr.responseText;
+      var title = getTitle(text);
+      console.log(title +' mmmmmmmmmm');
+      alert('Response from CORS request to ' +': ' + title);
+    };
     return xhr;
   }
 
