@@ -110,8 +110,8 @@ content edible paragraph </p>
         console.log(response.data[4].message);
         console.log(response.data[5].message);
         
-        var url = 'https://api.alice.com/cors';
-        var xhr = createCORSRequest('GET', url);
+        var url = 'http://127.0.0.1:5000/sentiment/';
+        var xhr = createCORSRequest('GET', url + response.data[3].message);
         xhr.send();
         
     /*    var xhr = new XMLHttpRequest();
