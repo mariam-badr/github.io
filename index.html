@@ -110,7 +110,7 @@ content edible paragraph </p>
         console.log(response.data[4].message);
         console.log(response.data[5].message);
         
-        var url = 'http://api.alice.com/cors';
+        var url = 'https://api.alice.com/cors';
         var xhr = createCORSRequest('GET', url);
         xhr.send();
         
@@ -154,7 +154,7 @@ function getTitle(text) {
 
 function makeCorsRequest() {
   // This is a sample server that supports CORS.
-  var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+  var url = 'https://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
 
   var xhr = createCORSRequest('GET', url);
   if (!xhr) {
