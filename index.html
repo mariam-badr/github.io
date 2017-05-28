@@ -103,16 +103,19 @@ content edible paragraph </p>
         
        // document.getElementById('textbox_id').value +=response.data[0].message ;
         //var obj=JSON.parse(response);
+        console.log(response.data[0].message);
+        console.log(response.data[1].message);
+        console.log(response.data[2].message);
+        console.log(response.data[3].message);
+        console.log(response.data[4].message);
+        console.log(response.data[5].message);
+        
         text= 'mariam magdy mariam magdy mariam magdy badr'
         for(i=0;i<text.length;i++){
           setTimeout(function() {
             document.getElementById('textbox_id').value += 'm ';
           },10000);
-        }
-        console.log(response.data[0].message);
-        console.log(response.data[1].message);
-        console.log(response.data[2].message);
-        
+        }   
       }
     }
           );
