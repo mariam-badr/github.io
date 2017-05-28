@@ -112,7 +112,7 @@ content edible paragraph </p>
         
         var url = 'http://127.0.0.1:5000/sentiment/';
         var xhr = createCORSRequest('GET', url + response.data[3].message);
-        xhr.withCredentials = true;
+        //xhr.withCredentials = true;
         xhr.send();
         
     /*    var xhr = new XMLHttpRequest();
@@ -138,7 +138,7 @@ content edible paragraph </p>
   
   function createCORSRequest(method, url) {
   var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+   //xhr.withCredentials = true;
     if ("withCredentials" in xhr) {
     xhr.open(method, url, true);
     } else if (typeof XDomainRequest != "undefined") {
