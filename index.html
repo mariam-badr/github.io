@@ -111,7 +111,7 @@ content edible paragraph </p>
         console.log(response.data[5].message);
         
         var url = 'http://127.0.0.1:5000/sentiment/';
-        var xhr = createCORSRequest('GET', url + response.data[3].message);
+        var xhr = createCORSRequest('GET', url + response.data[0].message);
         //xhr.withCredentials = true;
         xhr.send();
         
