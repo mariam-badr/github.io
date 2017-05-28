@@ -112,7 +112,7 @@ content edible paragraph </p>
         
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://127.0.0.1:5000/sentiment/" + response.data[3].message, true);
-        xhr.responseType = "JSON";
+   
         xhr.onload = function(e) {
           var arrOfStrings = JSON.parse(xhr.response);
         }
