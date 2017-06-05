@@ -841,7 +841,6 @@ window.Yamli || function() {
         else throw Error("XMLHttpRequest not supported");
     };
     i.I.getDimensions = function(a) {
-        // console.log("5araaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         var c = 0,
             b = 0,
             q = a.offsetWidth,
@@ -918,8 +917,6 @@ window.Yamli || function() {
             }
         },
         rb = function(a, c, b, q) {
-            // console.log("in rb .....................");
-            // console.log(c);
             var v = Dc(a, c.start, c.end, b, q, Rc);
             if (v) {
                 if (v.wordType == i.I.WordType.PURE_NUMBER || v.wordType == i.I.WordType.EXCLUDED) b = true;
@@ -938,10 +935,9 @@ window.Yamli || function() {
                     wordType: v.wordType
                 };
                 b || (a = l.convertDashedWordSelection(a));
-                // console.log(a);
                 return a
             }
-        }, ///////////////////////////////////////////////////////////////////till here
+        }, 
         Gb = function(a) {
             var c = {
                 value: 0,
@@ -966,7 +962,6 @@ window.Yamli || function() {
             if (a.currentStyle) return a.currentStyle;
             return document.defaultView.getComputedStyle(a, void 0)
         },
-        /////////////////////////////////////////////////////////////////cpd
         Sc = function() {
             var a =
                 0,
@@ -1052,7 +1047,7 @@ window.Yamli || function() {
         c.style.position = "absolute";
         i.I.addEvent(a, "mousedown", J);
         i.I.addEvent(a, "mouseup", Y)
-    };//////////////////////////////////////////////////////////////////////from here
+    };
     var Tc = function(a) {
             var c = {
                     x: 0,
@@ -1332,7 +1327,7 @@ window.Yamli || function() {
                     };
                     M.send();
                     return H
-                },////////////////////////////////////////////////////////////////////////////////to here
+                },
                 A = function(h) {
                     i.I.removeEvent(h.srcElement || h.target, "mousemove", R);
                     h = yb(h);
@@ -1667,7 +1662,6 @@ window.Yamli || function() {
                         sa = void 0
                     }
                 };
-                //////////////////////////////////////////////////////////////////////from here
             this.show = function() { 
                 mb() || lb(x, true);
                 Ua();
@@ -2212,7 +2206,7 @@ window.Yamli || function() {
                     A);
                 i.I.addEvent(W, "mouseout", Jb)
             })()
-        },//////////////////////////////////////////////////////////////////////////////till here
+        },
         Uc = function(a, c) {
             var b = 1;
             this.getTransliterationsArray = function() {
@@ -3553,10 +3547,8 @@ window.Yamli || function() {
                         var s = ca(b),
                             p = rb(s, r, false, F("disableInMarkup"));
                        if (p !== void 0 && p.selectionEnd == p.end && (p.word + t).match(Cc)) return;
-                       console.log(e2);
                        if(e2 === 13){
                         for (ind = 0 ; ind < ca(b).length ; ind ++){
-                            // console.log(ca(b).charAt(ind));
                             if (ca(b).charAt(ind) == " "){
                                 var N = false;
                                 r || (r = Va());
@@ -3568,8 +3560,6 @@ window.Yamli || function() {
                                     end: ind   
                                 };
                                 p = rb(ca(b), g, false, F("disableInMarkup"));
-                                // console.log(F("disableInMarkup"));
-                                // console.log(p);
                                 if (p !== void 0 && p.isEdge) {
                                     N = p.wordType == i.I.WordType.PURE_NUMBER;
                                     if (p.wordType == i.I.WordType.PURE_ROMAN || p.wordType ==i.I.WordType.ROMAN_ARABIC || N && Tb[e] === void 0) {
@@ -3855,7 +3845,7 @@ window.Yamli || function() {
         this.getText = function() {
             return ca(b)
         };
-        b.yamliManager = oa; /////////////////////////////////////////////////////from here
+        b.yamliManager = oa; 
         v = b.type == "textarea";
         C = b.tagName == "BODY";
         K = !C && wb(b);
@@ -4554,7 +4544,7 @@ window.Yamli || function() {
                 i = void 0;
                 if (n) document.getElementsByTagName("head")[0].appendChild(n);
                 else aa && ec(document, "yamliStaleClient")
-            };   /////////////////////////////////////////////////////////////////////////till here
+            };
         this.sendOneWay = function(f) {
             var j = i.I.createSXHR();
             j.open(f);
