@@ -106,20 +106,15 @@ content edible paragraph </p>
       if (response && !response.error) {
         
        document.getElementById('textbox_id').value +=response.data[0].message ;
-        //var obj=JSON.parse(response);
-//         console.log(response.data[0].message);
-//         console.log(response.data[1].message);
-//         console.log(response.data[2].message);
-//         console.log(response.data[3].message);
-//         console.log(response.data[4].message);
-//         console.log(response.data[5].message);
         
-        var url = 'http://127.0.0.1:5000/sentiment/';
-        url += document.getElementById('textbox_id').value ;
-        console.log(url);
-        var xhr = createCORSRequest('GET', url);
-        //xhr.withCredentials = true;
-        xhr.send();
+        sendValue = function(){
+          var url = 'http://127.0.0.1:5000/sentiment/';
+          url += document.getElementById('textbox_id').value ;
+          console.log(url);
+          var xhr = createCORSRequest('GET', url);
+          //xhr.withCredentials = true;
+          xhr.send();
+        };
         
     /*    var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://127.0.0.1:5000/sentiment/" + response.data[3].message, true);
@@ -128,18 +123,7 @@ content edible paragraph </p>
           var arrOfStrings = JSON.parse(xhr.response);
         }
         xhr.send();*/
-        
-        
-        
-//         var text= 'mariam magdy mariam magdy mariam magdy'
-//         for(i=0;i<text.length;i++){
-// //           setTimeout(function() {
-//             document.getElementById('textbox_id').value += text.charAt(i);
-// //           },10000);
-//           setTimeout(function() {
-//             document.getElementById('textbox2').value =document.getElementById('textbox_id').value;
-//             },10000);
-//         }   
+           
       }
     }
           );  
@@ -195,7 +179,8 @@ function makeCorsRequest() {
   xhr.send();
 }
 </script>
-
+<!-- <button type="button" onclick="alert('Hello world!')">get result</button> -->
+  <input id="clickMe" type="button" value="get result" onclick="sendValue();" />
 <fb:login-button scope="public_profile,email,user_posts,publish_actions" onlogin="checkLoginState();">
 </fb:login-button>
 
