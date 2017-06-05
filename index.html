@@ -14,9 +14,9 @@ mariam magdy
 <p id="para" contenteditable="true">
 content edible paragraph </p>
   
-  <textarea id="textbox2" rows="4" cols="90" input type="submit" value="Submit">
+<!--   <textarea id="textbox2" rows="4" cols="90" input type="submit" value="Submit">
     box 2
-  </textarea>
+  </textarea> -->
 
   <div class="fb-share-button" 
     data-href="https://mariam-badr.github.io/github.io/" 
@@ -106,17 +106,19 @@ content edible paragraph </p>
     FB.api( "/me/feed", function (response) {
       if (response && !response.error) {
         
-       // document.getElementById('textbox_id').value +=response.data[0].message ;
+       document.getElementById('textbox_id').value +=response.data[0].message ;
         //var obj=JSON.parse(response);
-        console.log(response.data[0].message);
-        console.log(response.data[1].message);
-        console.log(response.data[2].message);
-        console.log(response.data[3].message);
-        console.log(response.data[4].message);
-        console.log(response.data[5].message);
+//         console.log(response.data[0].message);
+//         console.log(response.data[1].message);
+//         console.log(response.data[2].message);
+//         console.log(response.data[3].message);
+//         console.log(response.data[4].message);
+//         console.log(response.data[5].message);
         
         var url = 'http://127.0.0.1:5000/sentiment/';
-        var xhr = createCORSRequest('GET', url + response.data[0].message);
+        url += document.getElementById('textbox_id').value ;
+        console.log(url);
+        var xhr = createCORSRequest('GET', url);
         //xhr.withCredentials = true;
         xhr.send();
         
@@ -130,15 +132,15 @@ content edible paragraph </p>
         
         
         
-        var text= 'mariam magdy mariam magdy mariam magdy'
-        for(i=0;i<text.length;i++){
+//         var text= 'mariam magdy mariam magdy mariam magdy'
+//         for(i=0;i<text.length;i++){
+// //           setTimeout(function() {
+//             document.getElementById('textbox_id').value += text.charAt(i);
+// //           },10000);
 //           setTimeout(function() {
-            document.getElementById('textbox_id').value += text.charAt(i);
-//           },10000);
-          setTimeout(function() {
-            document.getElementById('textbox2').value =document.getElementById('textbox_id').value;
-            },10000);
-        }   
+//             document.getElementById('textbox2').value =document.getElementById('textbox_id').value;
+//             },10000);
+//         }   
       }
     }
           );  
