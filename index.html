@@ -10,8 +10,8 @@
 <textarea id="textbox_id" rows="4" cols="90" input type="submit" value="Submit">
 </textarea>
 
-<p id="para" contenteditable="true">
-content edible paragraph </p>
+<p id="para">
+ </p>
   
   <div class="fb-share-button" 
     data-href="https://mariam-badr.github.io/github.io/" 
@@ -138,9 +138,8 @@ content edible paragraph </p>
     }
     xhr.onload = function() { ///////////////////////////////////
       var text = xhr.responseText;
-     // var title = getTitle(text);
       console.log(text);
-//      alert('Response from CORS request to ' +': ' + title);
+     alert('result is ' +': ' + text);
     };
     return xhr;
   }
