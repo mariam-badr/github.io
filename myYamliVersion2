@@ -2,6 +2,7 @@
 // Build 5498 //
 function mariam2(){
 console.log("wwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
+sb(true);
 }
 window.Yamli || function() {
     var G = function(a) {
