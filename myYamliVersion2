@@ -1,5 +1,8 @@
 // Copyright (c) 2010 Language Analytics LLC //
 // Build 5498 //
+function mariam2(){
+console.log("wwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
+}
 window.Yamli || function() {
     var G = function(a) {
             return document.createElement(a)
