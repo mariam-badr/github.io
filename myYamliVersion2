@@ -233,7 +233,7 @@ window.Yamli || function() {
             }, 50);
             else i.I.addEvent(document, "DOMContentLoaded", q)
         })()
-    }; //////////////////////////////////////////////////////////////////////////////// till here
+    };
     var bc = function(a, c, b) {
             b = a.slice((b ||
                 c) + 1 || a.length);
@@ -631,7 +631,7 @@ window.Yamli || function() {
                 b.initEvent(c, true, true);
                 a.dispatchEvent(b)
             }
-        }, //////////////////////////////////////////////////////////////////////////////// till here without ,
+        }, 
         yc = function(a) {
             a = a ? a : window.event;
             a = a.charCode ? a.charCode : a.keyCode ? a.keyCode : a.which ? a.which : 0;
@@ -904,7 +904,7 @@ window.Yamli || function() {
             height: v,
             right: C
         }
-    }; ///////////////////////////////////////////////////////////////////////////till here
+    };
     var Dc = function(a, c, b, q, v, C) {
             for (; c > 0 && !a.charAt(c - 1).match(C);) c--;
             for (; b < a.length && !a.charAt(b).match(C);) b++;
