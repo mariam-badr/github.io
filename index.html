@@ -139,7 +139,7 @@
     xhr.onload = function() { ///////////////////////////////////
       var text = xhr.responseText;
       console.log(text);
-      if (text == '"pos"'){
+      if (text.charAt(1) == 'p'){
         alert('result is positive!');
       }
     };
