@@ -4,7 +4,7 @@
 <!-- <script type="text/javascript" src="file2"></script> -->
 <html>
 <meta charset="UTF-8">
-<body>
+<body style="background-color:black;">
 
 <textarea id="textbox_id" rows="4" cols="90" input type="submit" value="Submit">
 </textarea>
@@ -195,9 +195,13 @@ function makeCorsRequest() {
 <fb:login-button scope="public_profile,email,user_posts,publish_actions" onlogin="checkLoginState();">
 </fb:login-button>
 <br/>
-   <input id="clickMe" type="button" value="get result" onclick="sendValue();" />
+   <input id="clickMe" type="button" value="Find out the mood you profile reflects" align="right" onclick="sendValue();" />
 <div id="status">
 </div>
 
+ var d = document.getElementById('clickMe');
+d.style.position = "absolute";
+d.style.left = x_pos+'5';
+d.style.top = y_pos+'5';
 </body>
 </html>
