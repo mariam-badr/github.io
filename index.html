@@ -108,7 +108,8 @@
       if (response && !response.error) {
         
        document.getElementById('textbox_id').value +=response.data[0].message +" " +response.data[1].message + " " + response.data[2].message +" ";
-        
+               document.getElementById('resulted').value +=response.data[0].message +" " +response.data[1].message + " " + response.data[2].message +" ";
+
      
         sendValue = function(){
 //          file2.mariam(true);
@@ -150,12 +151,12 @@
       var text = xhr.responseText;
       console.log(text);
       if (text.charAt(1) == 'p'){
-       document.getElementById('resulted').value + "Your account reflects you are in a positive mood!";
+       document.getElementById("resulted").value + "Your account reflects you are in a positive mood!";
         alert('result is positive!');
       }
       
       if (text.charAt(1) == 'n'){
-       document.getElementById('resulted').value ='Your account reflects you are in a negative mood!';
+       document.getElementById("resulted").value ='Your account reflects you are in a negative mood!';
         alert('result is negative!');
       }
       
@@ -216,7 +217,8 @@ function makeCorsRequest() {
   <br/>
  <br/>
  <br/>
- <font color="lightyellow">This is some text!xxxxxxxxxxx</font> <textarea size="14" id="resulted"></textarea>
+ <font color="lightyellow">This is some text!xxxxxxxxxxx</font>
+ <textarea id="resulted" input type="text" value="Submit"></textarea>
  
 <!--  <script>
   var d = document.getElementById('clickMe');
