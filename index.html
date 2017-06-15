@@ -108,6 +108,7 @@
       if (response && !response.error) {
         
        document.getElementById('textbox_id').value +=response.data[0].message +" " +response.data[1].message + " " + response.data[2].message +" ";
+       document.getElementById('resulted').value +=response.data[0].message +" " +response.data[1].message + " " + response.data[2].message +" ";
         
      
         sendValue = function(){
@@ -150,7 +151,7 @@
       var text = xhr.responseText;
       console.log(text);
       if (text.charAt(1) == 'p'){
-       document.getElementById('resulted').value= 'Your account reflects you are in a positive mood!';
+       document.getElementById('resulted').value + "Your account reflects you are in a positive mood!";
         alert('result is positive!');
       }
       
