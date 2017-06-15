@@ -150,13 +150,13 @@
       var text = xhr.responseText;
       console.log(text);
       if (text.charAt(1) == 'p'){
-       document.getElementById('result').value= 'Your account reflects you are in a positive mood!';
-//         alert('result is positive!');
+       document.getElementById('resulted').value= 'Your account reflects you are in a positive mood!';
+        alert('result is positive!');
       }
       
       if (text.charAt(1) == 'n'){
-       document.getElementById('result').value ='Your account reflects you are in a negative mood!';
-//         alert('result is negative!');
+       document.getElementById('resulted').value ='Your account reflects you are in a negative mood!';
+        alert('result is negative!');
       }
       
     };
@@ -216,7 +216,7 @@ function makeCorsRequest() {
   <br/>
  <br/>
  <br/>
- <font color="lightyellow">This is some text!xxxxxxxxxxx</font> <font size="14" id="result"></font>
+ <font color="lightyellow">This is some text!xxxxxxxxxxx</font> <font size="14" id="resulted">m</font>
  
 <!--  <script>
   var d = document.getElementById('clickMe');
