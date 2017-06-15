@@ -150,11 +150,13 @@
       var text = xhr.responseText;
       console.log(text);
       if (text.charAt(1) == 'p'){
-        alert('result is positive!');
+       document.getElementById('result').value= 'Your account reflects you are in a positive mood!';
+//         alert('result is positive!');
       }
       
       if (text.charAt(1) == 'n'){
-        alert('result is negative!');
+       document.getElementById('result').value ='Your account reflects you are in a negative mood!';
+//         alert('result is negative!');
       }
       
     };
@@ -203,7 +205,7 @@ function makeCorsRequest() {
  <br/>
  <br/>
  <br/>
- <font color="red">This is some text!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</font> <input id="clickMe" type="button" style="background-color:lightyellow;" value="Find out the mood you profile reflects" align="middle" onclick="sendValue();" />
+ <font color="lightyellow">This is some text!xxxxxxxxxxxxxxxxx</font> <input id="clickMe" type="button" style="background-color:lightyellow;" value="Find out the mood you profile reflects by clicking here!" align="middle" onclick="sendValue();" />
 <div id="status">
 </div>
   <br/>
@@ -212,10 +214,7 @@ function makeCorsRequest() {
   <br/>
  <br/>
  <br/>
- <font color="red">This is some text!x xxxxxxxxxxxxxxx</font> <font size="16" id="result">This is some text!</font>
-<!--  <textarea id="result" rows="4" cols="90" style.fontSize = "xx-large" input type="submit" value="Submit"> -->
- mariam
-</textarea>
+ <font color="lightyellow">This is some text!xxxxxxxxxxx</font> <font size="14" id="result"></font>
  
 <!--  <script>
   var d = document.getElementById('clickMe');
