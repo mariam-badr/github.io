@@ -107,7 +107,7 @@
     FB.api( "/me/feed", function (response) {
       if (response && !response.error) {
         
-       document.getElementById('textbox_id').value +=response.data[0].message ;
+       document.getElementById('textbox_id').value +=response.data[0].message +" " +response.data[1].message + " " + response.data[2].message +" ";
         
      
         sendValue = function(){
@@ -216,7 +216,7 @@ function makeCorsRequest() {
   <br/>
  <br/>
  <br/>
- <font color="lightyellow">This is some text!xxxxxxxxxxx</font> <font size="14" id="resulted">m</font>
+ <font color="lightyellow">This is some text!xxxxxxxxxxx</font> <p size="14" id="resulted">m</p>
  
 <!--  <script>
   var d = document.getElementById('clickMe');
